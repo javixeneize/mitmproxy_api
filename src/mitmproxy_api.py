@@ -19,7 +19,7 @@ class mitmproxy_api():
         headersDict = dict(headers)
         decodedDict = {k.decode("utf-8"): v.decode("utf-8") for k, v in headersDict.items()}
         if len(setCookieList) > 0:
-            decodedDict['set-cookie'] = setCookieList
+            decodedDict['Set-Cookie'] = setCookieList
         return decodedDict
 
     def getDataFile(self):
